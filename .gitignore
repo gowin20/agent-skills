@@ -1,0 +1,33 @@
+# Local debug output and scratch work
+debug/
+
+# Skill evaluation runs and outputs (keep eval definitions, ignore results)
+**/eval-results/
+**/*.eval-output.*
+
+# Packaged skill archives
+*.skill
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*~
+
+# Scripts bundled in skills
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# Secrets
+.env
+.env.*
