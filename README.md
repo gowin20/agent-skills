@@ -23,6 +23,9 @@ agent-skills/
 | Skill | Description |
 |---|---|
 | [agent-skills-specification](skills/agent-skills-specification/SKILL.md) | The Agent Skills format: required and optional fields, structure, and a step-by-step guide to creating a new skill. |
+| [iiif-image-api-2](skills/iiif-image-api-2/SKILL.md) | IIIF Image API 2.0: image request URLs, `info.json`, tiling, and compliance levels 0-2. |
+| [iiif-presentation-api-3](skills/iiif-presentation-api-3/SKILL.md) | IIIF Presentation API 3.0: Manifests, Canvases, Ranges, and painting/supplementing annotations, with an example Manifest. |
+| [w3c-web-annotation-model](skills/w3c-web-annotation-model/SKILL.md) | W3C Web Annotation Data Model: bodies, targets, SpecificResource, selectors, states, motivations, and collections. |
 
 ## Using these skills
 

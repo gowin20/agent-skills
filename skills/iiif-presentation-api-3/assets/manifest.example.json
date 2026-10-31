@@ -1,0 +1,165 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://example.org/iiif/artwork1/manifest",
+  "type": "Manifest",
+  "label": { "en": ["Harbour at Dusk"] },
+  "summary": { "en": ["Oil on canvas, front and reverse views, with a conservation note on the signature."] },
+  "metadata": [
+    { "label": { "en": ["Artist"] }, "value": { "none": ["Example Artist"] } },
+    { "label": { "en": ["Date"] }, "value": { "en": ["c. 1890"] } },
+    { "label": { "en": ["Medium"] }, "value": { "en": ["Oil on canvas"] } },
+    { "label": { "en": ["Dimensions"] }, "value": { "en": ["61 × 46 cm"] } }
+  ],
+  "rights": "http://creativecommons.org/licenses/by/4.0/",
+  "requiredStatement": {
+    "label": { "en": ["Attribution"] },
+    "value": { "en": ["Courtesy of Example Gallery"] }
+  },
+  "provider": [
+    {
+      "id": "https://example.org/about",
+      "type": "Agent",
+      "label": { "en": ["Example Gallery"] },
+      "homepage": [
+        {
+          "id": "https://example.org/",
+          "type": "Text",
+          "label": { "en": ["Example Gallery homepage"] },
+          "format": "text/html"
+        }
+      ]
+    }
+  ],
+  "thumbnail": [
+    {
+      "id": "https://example.org/iiif2/artwork1-front/full/200,/0/default.jpg",
+      "type": "Image",
+      "format": "image/jpeg",
+      "width": 200,
+      "height": 150,
+      "service": [
+        {
+          "@id": "https://example.org/iiif2/artwork1-front",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json"
+        }
+      ]
+    }
+  ],
+  "viewingDirection": "left-to-right",
+  "behavior": ["individuals"],
+  "items": [
+    {
+      "id": "https://example.org/iiif/artwork1/canvas/front",
+      "type": "Canvas",
+      "label": { "en": ["Front"] },
+      "width": 6000,
+      "height": 4500,
+      "items": [
+        {
+          "id": "https://example.org/iiif/artwork1/page/front/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/artwork1/annotation/front-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://example.org/iiif2/artwork1-front/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 6000,
+                "height": 4500,
+                "service": [
+                  {
+                    "@id": "https://example.org/iiif2/artwork1-front",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  }
+                ]
+              },
+              "target": "https://example.org/iiif/artwork1/canvas/front"
+            }
+          ]
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://example.org/iiif/artwork1/page/front/notes",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/artwork1/annotation/front-signature",
+              "type": "Annotation",
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "value": "Signature, lower right; retouched in 1952.",
+                "language": "en",
+                "format": "text/plain"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/artwork1/canvas/front",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "conformsTo": "http://www.w3.org/TR/media-frags/",
+                  "value": "xywh=4800,3900,900,400"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/iiif/artwork1/canvas/reverse",
+      "type": "Canvas",
+      "label": { "en": ["Reverse"] },
+      "width": 6000,
+      "height": 4500,
+      "items": [
+        {
+          "id": "https://example.org/iiif/artwork1/page/reverse/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/artwork1/annotation/reverse-image",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://example.org/iiif2/artwork1-reverse/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 6000,
+                "height": 4500,
+                "service": [
+                  {
+                    "@id": "https://example.org/iiif2/artwork1-reverse",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  }
+                ]
+              },
+              "target": "https://example.org/iiif/artwork1/canvas/reverse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://example.org/iiif/artwork1/range/views",
+      "type": "Range",
+      "label": { "en": ["Views"] },
+      "items": [
+        { "id": "https://example.org/iiif/artwork1/canvas/front", "type": "Canvas" },
+        { "id": "https://example.org/iiif/artwork1/canvas/reverse", "type": "Canvas" }
+      ]
+    }
+  ]
+}
