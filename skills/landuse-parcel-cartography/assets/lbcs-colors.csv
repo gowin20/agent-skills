@@ -1,0 +1,46 @@
+dimension,code,category,color_name,hex,r,g,b
+Activity,1000,Residential activities,yellow,#FFFF00,255,255,0
+Activity,2000,"Shopping, business, or trade activities",red,#FF0000,255,0,0
+Activity,3000,"Industrial, manufacturing, and waste-related activities",purple,#A020F0,160,32,240
+Activity,4000,"Social, institutional, or infrastructure-related activities",blue,#0000FF,0,0,255
+Activity,5000,Travel or movement activities,gray,#BEBEBE,190,190,190
+Activity,6000,Mass assembly of people,dark slate gray,#2F4F4F,47,79,79
+Activity,7000,Leisure activities,light green,#90EE90,144,238,144
+Activity,8000,Natural resources-related activities,forest green,#228B22,34,139,34
+Activity,9000,No human activity or unclassifiable activity,white,#FFFFFF,255,255,255
+Function,1000,Residence or accommodation functions,yellow,#FFFF00,255,255,0
+Function,2000,General sales or services,red,#FF0000,255,0,0
+Function,3000,Manufacturing and wholesale trade,purple,#A020F0,160,32,240
+Function,4000,"Transportation, communication, information, and utilities",gray,#BEBEBE,190,190,190
+Function,5000,"Arts, entertainment, and recreation",light green,#90EE90,144,238,144
+Function,6000,"Education, public admin., health care, and other inst.",blue,#0000FF,0,0,255
+Function,7000,Construction-related businesses,dark cyan,#008B8B,0,139,139
+Function,8000,Mining and extraction establishments,purple4,#551A8B,85,26,139
+Function,9000,"Agriculture, forestry, fishing and hunting",forest green,#228B22,34,139,34
+Structure,1000,Residential buildings,yellow,#FFFF00,255,255,0
+Structure,2000,Commercial buildings and other specialized structures,red,#FF0000,255,0,0
+Structure,3000,Public assembly structures,purple,#A020F0,160,32,240
+Structure,4000,Institutional or community facilities,blue,#0000FF,0,0,255
+Structure,5000,Transportation-related facilities,gray,#BEBEBE,190,190,190
+Structure,6000,Utility and other nonbuilding structures,gray52,#858585,133,133,133
+Structure,7000,Specialized military structures,pink,#FFC0CB,255,192,203
+Structure,8000,"Sheds, farm buildings, or agricultural facilities",forest green,#228B22,34,139,34
+Structure,9000,No structure,white,#FFFFFF,255,255,255
+Site,1000,Site in natural state,light green,#90EE90,144,238,144
+Site,2000,Developing site,beige,#F5F5DC,245,245,220
+Site,3000,"Developed site -- crops, grazing, forestry, etc.",bisque3,#CDB79E,205,183,158
+Site,4000,Developed site -- no buildings and no structures,wheat4,#8B7E66,139,126,102
+Site,5000,Developed site -- nonbuilding structures,tan4,#8B5A2B,139,90,43
+Site,6000,Developed site -- with buildings,brown4,#8B2323,139,35,35
+Site,7000,Developed site -- with parks,forest green,#228B22,34,139,34
+Site,8000,Not applicable to this dimension,light gray,#D3D3D3,211,211,211
+Site,9000,Unclassifiable site development character,white,#FFFFFF,255,255,255
+Ownership,1000,No constraints--private ownership,beige,#F5F5DC,245,245,220
+Ownership,2000,Some constraints--easements or other use restrictions,blue,#0000FF,0,0,255
+Ownership,3000,Limited restrictions--leased and other tenancy restrictions,blue4,#00008B,0,0,139
+Ownership,4000,"Public restrictions--local, state, and federal ownership",light green,#90EE90,144,238,144
+Ownership,5000,"Other public use restrictions--regional, special districts, etc",dark green,#006400,0,100,0
+Ownership,6000,Nonprofit ownership restrictions,olive drab,#6B8E23,107,142,35
+Ownership,7000,Joint ownership character--public entities,gray,#BEBEBE,190,190,190
+Ownership,8000,"Joint ownership character--public, private, nonprofit, etc.",black,#000000,0,0,0
+Ownership,9000,Not applicable to this dimension,white,#FFFFFF,255,255,255

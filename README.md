@@ -30,6 +30,7 @@ agent-skills/
 | [iiif-presentation-api-3](skills/iiif-presentation-api-3/SKILL.md) | IIIF Presentation API 3.0: Manifests, Canvases, Ranges, and painting/supplementing annotations, with an example Manifest. |
 | [w3c-web-annotation-model](skills/w3c-web-annotation-model/SKILL.md) | W3C Web Annotation Data Model: bodies, targets, SpecificResource, selectors, states, motivations, and collections. |
 | [strunk-white-style](skills/strunk-white-style/SKILL.md) | Writing, editing, and critiquing English prose by the rules of Strunk and White's *The Elements of Style*. |
+| [landuse-parcel-cartography](skills/landuse-parcel-cartography/SKILL.md) | Symbology and color conventions for land use parcel, zoning, and future land use maps, with traditional and APA LBCS color tables and a ready-to-use palette. |
 
 ## Installing as a plugin
 
