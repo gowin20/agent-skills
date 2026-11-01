@@ -70,6 +70,13 @@ claude plugin marketplace add gowin20/agent-skills     # or a local path, e.g. E
 claude plugin install gowin20-agent-skills@gowin20-skills
 ```
 
+Once installed, verify your installation by checking `~/.claude/settings.json`, or with the following commands:
+
+```bash
+claude plugin list
+claude plugin marketplace list
+```
+
 ### Validating the manifests
 
 ```bash
