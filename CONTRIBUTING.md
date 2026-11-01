@@ -19,6 +19,12 @@
 - [ ] Bundled scripts are non-interactive, document `--help`, and pin their dependencies
 - [ ] Tested on at least one real task with an agent
 - [ ] Skill is listed in the table in `README.md`
+- [ ] `version` in `.claude-plugin/plugin.json` is bumped (patch for fixes, minor for new skills). Keep `version` only in `plugin.json`, not in the `marketplace.json` entry, so the two can't drift apart.
+- [ ] `claude plugin validate .` and `claude plugin validate .claude-plugin/plugin.json` pass
+
+## Plugin packaging
+
+The whole repository is published as one plugin (`gowin20-agent-skills`) in the marketplace `gowin20-skills`. Don't rename either one lightly: users' installed plugin IDs (`gowin20-agent-skills@gowin20-skills`) depend on them. `agent-skills` is a reserved marketplace name and can't be used.
 
 ## Commits
 

@@ -1,0 +1,19 @@
+{
+  "name": "gowin20-skills",
+  "owner": {
+    "name": "George Owen",
+    "url": "https://github.com/gowin20"
+  },
+  "metadata": {
+    "description": "Agent Skills by gowin20, packaged as a single plugin."
+  },
+  "plugins": [
+    {
+      "name": "gowin20-agent-skills",
+      "source": "./",
+      "description": "A collection of Agent Skills: the Agent Skills specification, IIIF Image API 2.0, IIIF Presentation API 3.0, the W3C Web Annotation Data Model, and Strunk & White prose style.",
+      "category": "skills",
+      "tags": ["skills", "iiif", "web-annotation", "writing"]
+    }
+  ]
+}
