@@ -1,0 +1,126 @@
+{
+  "version": 8,
+  "name": "Minimal starter",
+  "metadata": {
+    "starter:comment": "Uses the MapLibre demo tiles, glyphs, and sprite. Source layers: countries (NAME, ABBREV, ADM0_A3, CONTINENT), centroids (NAME, ABBREV), geolines (name). Demo fonts: Open Sans Semibold, Noto Sans Regular, Noto Sans Bold."
+  },
+  "center": [10, 30],
+  "zoom": 1.5,
+  "glyphs": "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+  "sprite": "https://demotiles.maplibre.org/styles/osm-bright-gl-style/sprite",
+  "sources": {
+    "maplibre": {
+      "type": "vector",
+      "url": "https://demotiles.maplibre.org/tiles/tiles.json"
+    },
+    "airports": {
+      "type": "geojson",
+      "data": {
+        "type": "FeatureCollection",
+        "features": [
+          { "type": "Feature", "properties": { "name": "Heathrow", "passengers": 79 }, "geometry": { "type": "Point", "coordinates": [-0.4543, 51.47] } },
+          { "type": "Feature", "properties": { "name": "Hartsfield-Jackson", "passengers": 104 }, "geometry": { "type": "Point", "coordinates": [-84.4277, 33.6407] } },
+          { "type": "Feature", "properties": { "name": "Haneda", "passengers": 85 }, "geometry": { "type": "Point", "coordinates": [139.7798, 35.5494] } }
+        ]
+      }
+    }
+  },
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": { "background-color": "#cfe3ef" }
+    },
+    {
+      "id": "countries-fill",
+      "type": "fill",
+      "source": "maplibre",
+      "source-layer": "countries",
+      "paint": {
+        "fill-color": [
+          "match", ["get", "CONTINENT"],
+          "Africa", "#f3e3c3",
+          "Asia", "#e8d7c9",
+          "Europe", "#dfe6c8",
+          "North America", "#f0dccf",
+          "South America", "#e3e9d3",
+          "Oceania", "#efe0d8",
+          "#eeeeee"
+        ]
+      }
+    },
+    {
+      "id": "countries-boundary",
+      "type": "line",
+      "source": "maplibre",
+      "source-layer": "countries",
+      "layout": { "line-join": "round", "line-cap": "round" },
+      "paint": {
+        "line-color": "#8a8a8a",
+        "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.4, 6, 1.5]
+      }
+    },
+    {
+      "id": "geolines",
+      "type": "line",
+      "source": "maplibre",
+      "source-layer": "geolines",
+      "filter": ["!=", ["get", "name"], "International Date Line"],
+      "paint": {
+        "line-color": "#6f9fbf",
+        "line-width": 1,
+        "line-dasharray": [3, 3]
+      }
+    },
+    {
+      "id": "airports-circle",
+      "type": "circle",
+      "source": "airports",
+      "paint": {
+        "circle-radius": ["interpolate", ["linear"], ["get", "passengers"], 50, 6, 110, 12],
+        "circle-color": "#ffffff",
+        "circle-opacity": 0.8,
+        "circle-stroke-color": "#3b6e8f",
+        "circle-stroke-width": 1
+      }
+    },
+    {
+      "id": "airports-icon",
+      "type": "symbol",
+      "source": "airports",
+      "layout": {
+        "icon-image": "airport_11",
+        "icon-allow-overlap": true,
+        "text-field": ["get", "name"],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 11,
+        "text-anchor": "top",
+        "text-offset": [0, 1.2],
+        "text-optional": true
+      },
+      "paint": {
+        "text-color": "#1f3b4d",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.2
+      }
+    },
+    {
+      "id": "country-labels",
+      "type": "symbol",
+      "source": "maplibre",
+      "source-layer": "centroids",
+      "layout": {
+        "text-field": ["step", ["zoom"], ["get", "ABBREV"], 3, ["get", "NAME"]],
+        "text-font": ["Open Sans Semibold"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 1, 9, 6, 16],
+        "text-max-width": 8,
+        "text-transform": "uppercase"
+      },
+      "paint": {
+        "text-color": "#444444",
+        "text-halo-color": "rgba(255, 255, 255, 0.85)",
+        "text-halo-width": 1.5
+      }
+    }
+  ]
+}

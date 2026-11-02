@@ -31,6 +31,7 @@ agent-skills/
 | [w3c-web-annotation-model](skills/w3c-web-annotation-model/SKILL.md) | W3C Web Annotation Data Model: bodies, targets, SpecificResource, selectors, states, motivations, and collections. |
 | [strunk-white-style](skills/strunk-white-style/SKILL.md) | Writing, editing, and critiquing English prose by the rules of Strunk and White's *The Elements of Style*. |
 | [landuse-parcel-cartography](skills/landuse-parcel-cartography/SKILL.md) | Symbology and color conventions for land use parcel, zoning, and future land use maps, with traditional and APA LBCS color tables and a ready-to-use palette. |
+| [maplibre-style-specification](skills/maplibre-style-specification/SKILL.md) | The MapLibre style spec (v8): style documents, sources, layers and every paint/layout property, expressions, glyphs, and sprites, with a validated starter style. |
 
 ## Installing as a plugin
 

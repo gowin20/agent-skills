@@ -11,9 +11,9 @@
     {
       "name": "gowin20-agent-skills",
       "source": "./",
-      "description": "A collection of Agent Skills: the Agent Skills specification, IIIF Image API 2.0, IIIF Presentation API 3.0, the W3C Web Annotation Data Model, Strunk & White prose style, and land use parcel cartography.",
+      "description": "A collection of Agent Skills: the Agent Skills specification, IIIF Image API 2.0, IIIF Presentation API 3.0, the W3C Web Annotation Data Model, Strunk & White prose style, land use parcel cartography, and the MapLibre style specification.",
       "category": "skills",
-      "tags": ["skills", "iiif", "web-annotation", "writing", "cartography", "gis"]
+      "tags": ["skills", "iiif", "web-annotation", "writing", "cartography", "gis", "maplibre"]
     }
   ]
 }
